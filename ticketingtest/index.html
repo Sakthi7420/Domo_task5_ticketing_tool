@@ -1,0 +1,142 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="styles/app.css" />
+  </head>
+  <body>
+    <header id="header">Ticketing Tool App</header>
+    <div class="container">
+      <i
+        id="navMenu"
+        class="fa fa-bars nav-bar"
+        style="
+          font-size: 35px;
+          margin: 10px 10px;
+          color: black;
+          cursor: pointer;
+          margin-left: 10px;
+        "
+      >
+      </i>
+      <div class="sidebar-header">
+        <h1 class="sidebar-title" id="navbar-name"></h1>
+        <img src="OIP.jpg" class="logo" alt="Logo" />
+      </div>
+    </div>
+
+    <div id="nav-list" class="nav-item-container">
+      <button><h1 class="nav-heading" id="create-ticket">Create Ticket +</h1></a></button>
+      <button><h1 class="nav-heading" id="create-team">Create Team</h1></button>
+      <button><h1 class="nav-heading" id="manage-ticket">Manage Tickets</h1></button>
+      <button><h1 class="nav-heading" id="manage-team">Manage Team</h1></button>
+    </div>
+
+    <div id="drop-depart" class="drop-container">
+      <div class="drop-list">
+        <label class="label-text">Departments</label>
+        <select class="drop-depart" id="select-drop-list" required>
+          <option value="select-option">Select Option</option>
+        </select>
+      </div>
+      <div class="div-input">
+        <label class="label-ticket">Ticket Name</label>
+        <input type="text" class="input-ticket" id="ticket-name"  placeholder="required field"/>
+      </div>
+      <div class="details-div">
+        <label class="ticket-detail">Ticket Details</label>
+        <div>
+          <textarea name="details" class="input-textarea" id="ticket-details" required></textarea>
+        </div>
+      </div>
+        <div class="submit-btn">
+          <button class="submit" id="ticket-submit-btn">Submit Ticket</button>
+        </div>
+    </div>
+
+    <div id="notification_ticket" class="notification-ticket ">
+      Ticket Created successfully! ☑️
+  </div>
+    
+    
+    <div class="nav-manage-team" id="create-teams-details">
+      <h1 class="create-heading1">Create Team</h1>
+      <label class="team-label" >Team Name</label>
+      <input type="text" class="input-team" id="team-name" placeholder="required field"/>
+      <div class="people-container">
+        <p class="people-label">People/Member</p>
+        <select id="people-list-candidate" class="people-list" multiple></select>
+      </div>
+      <div class="create-submit-btn">
+        <button class="submit" id="team-submit-btn">Submit Team</button>
+      </div>
+    </div>
+
+    <div id="notification" class="notification ">
+      Team Created successfully! ☑️
+  </div>
+
+    <!-- team error messages -->
+    <div id="error-message" class="error-message">
+      <span id="error-text"></span>
+    </div>
+
+    <div id="error-message-team" class="error-message-team">
+      <span id="error-text-name"></span>
+    </div>
+
+    <!-- ticket error messages -->/
+    <div id="error-message-ticket" class="error-message-ticket">
+      <span id="error-text-ticket"></span>
+    </div>
+   
+
+   <div class="create-ticket" id="manage-ticket-details">
+      <table>
+          <thead>
+              <tr>
+                  <th class="tdepart">Departments</th>
+                  <th class="tname">Ticket Name</th>
+                  <th class="tdetails">Ticket Details</th>
+                  <th class="option">Options</th>
+              </tr>
+          </thead>
+          <tbody id="table-ticket-body">
+          </tbody>
+      </table>
+  </div>
+
+
+    <div class="create-team" id="manage-team-details">
+      <table>
+        <thead>
+          <tr>
+            <th class="tname">Team Name</th>
+            <th class="tmember">Team Members</th>
+            <th class="option">Options</th>
+          </tr>
+        </thead>
+        <tbody id="table-team-body">
+        </tbody>
+      </table>
+    </div>
+
+   
+
+
+    <main id="app"></main>
+    <script src="js/helpers.js"></script>
+    <script src="components/router.js"></script>
+    <script src="components/autocomplete.js"></script>
+    <script src="components/modal.js"></script>
+    <script src="components/table.js"></script>
+    <script src="components/floatingactionbutton.js"></script>
+    <script src="https://unpkg.com/ryuu.js"></script>
+    <script src="https://unpkg.com/@domoinc/domo-phoenix/build/global/domoPhoenixWithMaps.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>  
+
+

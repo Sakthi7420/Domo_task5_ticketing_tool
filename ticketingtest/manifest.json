@@ -1,0 +1,72 @@
+{
+  "name": "ticketing_test",
+  "version": "0.1.0",
+  "size": {
+    "width": 5,
+    "height": 3
+  },
+  "collections":[
+    {
+      "name": "Ticketing_tool",
+      "schema":{
+        "columns": [
+          { "name": "departments", "type": "STRING" },
+          { "name": "ticket_name", "type": "STRING" },
+          { "name": "ticket_details", "type": "STRING" }
+        ]
+      },
+      "syncEnabled":true
+    },
+    {
+      "name": "ticket_team",
+      "schema":{
+        "columns": [
+          { "name": "team_name", "type": "STRING" },
+          { "name": "team_user", "type": "STRING" },
+          { "name": "team_Id", "type": "STRING" }
+        ]
+      }
+    }
+  ],
+  "workflowMapping": [
+    {
+      "alias": "send_email",
+      "modelId": null,
+      "version": null,
+      "parameters": [
+        {
+          "name": "to",
+          "aliasedName": "to",
+          "type": "person",
+          "list": false,
+          "children": []
+        },
+        {
+          "name": "sub",
+          "aliasedName": "sub",
+          "type": "text",
+          "list": false,
+          "children": []
+        },
+        {
+          "name": "body",
+          "aliasedName": "body",
+          "type": "text",
+          "list": false,
+          "children": []
+        }
+      ]
+    }
+  ],
+  "mapping": [
+    {
+      "dataSetId": "968af17d-8c5b-4baf-bd2b-3096bb33b5ba",
+      "alias": "ticket_test",
+      "fields": []
+    }
+  ],
+  
+  "fileName": "manifest.json",
+  "id": "964480dc-a08d-4565-a998-8bd09d5f6d80",
+  "proxyId": "d0a849c7-5a14-4067-8bc5-dfe8a5ae422c"
+}
